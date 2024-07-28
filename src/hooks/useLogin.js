@@ -15,7 +15,7 @@ const useLogin = () => {
     try {
       const res = await axios.post(`${localHost}/auth/login`, {
         userName: username,
-        password,
+        password, 
       });
       console.log(res);
 
