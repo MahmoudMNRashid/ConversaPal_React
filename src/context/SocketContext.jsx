@@ -22,19 +22,20 @@ export const SocketContextProvider = ({ children }) => {
         query: {
           userId: authUser._id,
         },
+        withCredentials: true,
       });
-console.log(socket)
+      console.log(socket);
       setSocket(socket);
 
-//now we can listen to events  first event which is online users
+      //now we can listen to events  first event which is online users
       socket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
-    });
+      });
 
       return () => socket.close();
     } else {
       if (socket) {
-        //this is will be disconnect function in backend 
+        //this is will be disconnect function in backend
         socket.close();
         setSocket(null);
       }

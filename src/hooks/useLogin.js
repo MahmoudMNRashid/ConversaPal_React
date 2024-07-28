@@ -13,10 +13,14 @@ const useLogin = () => {
     if (!success) return;
     setLoading(true);
     try {
-      const res = await axios.post(`${localHost}/auth/login`, {
-        userName: username,
-        password, 
-      });
+      const res = await axios.post(
+        `${localHost}/auth/login`,
+        {
+          userName: username,
+          password,
+        },
+        // { withCredentials: true }
+      );
       console.log(res);
 
       localStorage.setItem("chat-user", JSON.stringify(res.data));
