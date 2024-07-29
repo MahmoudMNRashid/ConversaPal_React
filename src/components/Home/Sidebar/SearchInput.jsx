@@ -25,15 +25,15 @@ const SearchInput = () => {
     } else toast.error("No such user found!");
   };
   return (
-    <form className="flex items-center gap-2" onSubmit={handleSubmit}>
+    <form className="flex items-center gap-2 w-full" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search…"
-        className="input input-bordered rounded-full"
+        className="input input-bordered rounded-full w-full"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button type="submit" className="btn btn-circle bg-slate-500 text-white">
+      <button type="submit" className="btn btn-circle bg1 text-white hover2">
         <CiSearch className="w-6 h-6 outline-none" />
       </button>
     </form>

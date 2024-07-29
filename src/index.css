@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color1: #432371;
+  --color2: #faae7b;
+}
 body {
   background: linear-gradient(
     90deg,
-    hsla(213, 77%, 14%, 1) 0%,
-    hsla(202, 27%, 45%, 1) 100%
+    hsla(265, 53%, 29%, 1) 0%,
+    hsla(24, 93%, 73%, 1) 100%
   );
 }
 ::-webkit-scrollbar {
@@ -14,17 +18,59 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #555;
+  background: var(--color2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #121212;
+  background: white;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #242424;
 }
+
+.color1 {
+  color: var(--color1);
+}
+
+.bg1 {
+  background-color: var(--color1);
+}
+.bg2 {
+  background-color: var(--color2);
+}
+.color2 {
+  color: var(--color2);
+}
+.h-v-90 {
+  height: 90vh;
+}
+
+.custom-h{
+  height: calc(90vh - 40px - 44px);
+}
+.reverse__background__gradiant {
+  background: linear-gradient(
+    90deg,
+    hsla(24, 93%, 73%, 1) 0%,
+    hsla(265, 53%, 29%, 1) 100%
+  );
+}
+
+.hover1:hover {
+  background-color: var(--color1);
+}
+.hover2:hover {
+  background-color: var(--color2);
+}
+
+.shadow1 {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
 .shake {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
   transform: translate3d(0, 0, 0);
@@ -53,4 +99,13 @@ body {
   60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+.customHeight{
+  height: 100%;
+}
+
+@media (max-width:768px) {
+ .customHeight{
+  height: 40vh;
+ }
 }

@@ -16,8 +16,8 @@ useListenMessages()
     }, 100);
   }, [messages]);
   return (
-    <div className="px-4 flex-1 overflow-auto">
-      <div className="px-4 flex-1 overflow-auto h-96">
+    <div className="px-4 flex-1 overflow-auto  ">
+      <div className="px-4 flex-1 overflow-auto customHeight">
         {!loading &&
           messages.length > 0 &&
           messages.map((message) => (

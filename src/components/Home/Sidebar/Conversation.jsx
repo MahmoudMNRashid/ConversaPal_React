@@ -11,10 +11,9 @@ const Conversation = ({ conversation, lastIdx }) => {
   const isOnline = onlineUsers.includes(conversation._id);
   return (
     <>
-      {" "}
       <div
-        className={`flex gap-2 items-center hover:bg-slate-950 rounded p-2 py-1 cursor-pointer
-				${isSelected ? "bg-slate-950" : ""}`}
+        className={`flex gap-2 items-center hover1 rounded p-2 py-1 cursor-pointer
+				${isSelected ? "bg1" : ""}`}
         onClick={() => setSelectedConversation(conversation)}
       >
         <div className={`avatar ${isOnline ? "online" : ""}`}>
