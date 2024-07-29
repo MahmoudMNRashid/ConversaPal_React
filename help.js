@@ -1,6 +1,6 @@
-// export const localHost = "https://conversapal-production.up.railway.app";
+export const localHost = "https://conversapal-production.up.railway.app";
 
-export const localHost= "http://localhost:8080"
+// export const localHost= "http://localhost:8080"
 export const extractTime = (dateString) => {
   const date = new Date(dateString);
   const hours = padZero(date.getHours());
