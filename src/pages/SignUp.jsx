@@ -109,6 +109,7 @@ const SignUp = () => {
                 "Sign Up"
               )}
             </button>
+            <p className="flex justify-center text-red-300">Please use VPN</p>
           </div>
         </form>
       </div>
